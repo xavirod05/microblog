@@ -132,3 +132,23 @@ WHERE user.username = ?]
 2025-10-01 13:21:38,890 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:50]
 2025-10-01 13:25:18,717 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:50]
 2025-10-01 13:27:08,917 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:50]
+2025-10-01 16:10:47,481 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:50]
+2025-10-01 16:10:49,121 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 26, in index
+    page=page,
+         ^^^^
+UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+2025-10-01 16:12:13,073 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:50]
