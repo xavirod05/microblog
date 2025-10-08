@@ -7,6 +7,9 @@ from app import db
 from flask_login import UserMixin
 from app import login
 from hashlib import md5
+from time import time
+import jwt
+from app import app
 
 followers = sa.Table(
     "followers",
@@ -95,6 +98,23 @@ class User(UserMixin, db.Model):
             .group_by(Post)
             .order_by(Post.timestamp.desc())
         )
+
+    def get_reset_password_token(self, expires_in=600):
+        return jwt.encode(
+            {"reset_password": self.id, "exp": time() + expires_in},
+            app.config["SECRET_KEY"],
+            algorithm="HS256",
+        )
+
+    @staticmethod
+    def verify_reset_password_token(token):
+        try:
+            id = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"])[
+                "reset_password"
+            ]
+        except:
+            return
+        return db.session.get(User, id)
 
 
 class Post(db.Model):
