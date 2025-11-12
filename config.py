@@ -19,7 +19,7 @@ class Config:
 
     # ADMINS and other variables for for http
     ADMINS = [os.environ.get("ADMIN_EMAIL")]
-    SERVER_NAME = "localhost:5000"
+    # SERVER_NAME = "localhost:5000"
     PREFERRED_URL_SCHEME = "http"
 
     POSTS_PER_PAGE = 3
