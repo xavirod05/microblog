@@ -19,7 +19,11 @@ class Config:
 
     # ADMINS and other variables for for http
     ADMINS = [os.environ.get("ADMIN_EMAIL")]
+    LANGUAGES = ["en", "es"]
     # SERVER_NAME = "localhost:5000"
     PREFERRED_URL_SCHEME = "http"
 
     POSTS_PER_PAGE = 3
+    
+    ELASTICSEARCH_URL = os.environ.get("ELASTICSEARCH_URL")
+    WHOOSH_ENABLED = True

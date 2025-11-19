@@ -1,79 +1,13 @@
-2025-11-05 16:42:17,200 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
+2025-11-19 14:55:58,165 ERROR: Exception on /index [GET] [in /Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
 Traceback (most recent call last):
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 40, in index
-    return render_template('index.html', title=_('Home'), form=form,
-                           posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
-    self.environment.handle_exception()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/xavierrodriguez/projects/microblog/app/templates/index.html", line 2, in top-level template code
-    {% import "bootstrap5/form.html" as wtf %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
-    return self._get_source_fast(environment, template)
-           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap5/form.html
-2025-11-05 16:43:42,956 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:65]
-2025-11-05 16:43:45,451 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
-Traceback (most recent call last):
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 40, in index
-    return render_template('index.html', title=_('Home'), form=form,
-                           posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
-    self.environment.handle_exception()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/xavierrodriguez/projects/microblog/app/templates/index.html", line 2, in top-level template code
-    {% import "bootstrap_wtf.html" as wtf %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
-    return self._get_source_fast(environment, template)
-           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
-2025-11-19 13:46:01,591 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:65]
-2025-11-19 13:46:14,702 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:65]
-2025-11-19 13:46:20,667 ERROR: Exception on /login [GET] [in /Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.language
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -87,25 +21,113 @@ Traceback (most recent call last):
   File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 77, in login
-    return render_template('login.html', title=_('Sign In'), form=form)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
-    self.environment.handle_exception()
-  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/xavierrodriguez/projects/microblog/app/templates/login.html", line 2, in top-level template code
-    {% import "bootstrap_wtf.html" as wtf %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 65, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 99, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/main/routes.py", line 40, in index
+    posts = db.paginate(current_user.following_posts(), page=page,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 839, in paginate
+    return SelectPagination(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask_sqlalchemy/pagination.py", line 72, in __init__
+    items = self._query_items()
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask_sqlalchemy/pagination.py", line 339, in _query_items
+    return list(session.execute(select).unique().scalars())
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.language
+[SQL: SELECT post.id, post.body, post.timestamp, post.user_id, post.language 
+FROM post JOIN user AS user_1 ON user_1.id = post.user_id LEFT OUTER JOIN (followers AS followers_1 JOIN user AS user_2 ON followers_1.follower_id = user_2.id) ON followers_1.followed_id = user_1.id 
+WHERE user_2.id = ? OR user_1.id = ? GROUP BY post.id, post.body, post.timestamp, post.user_id, post.language ORDER BY post.timestamp DESC
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 3, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-11-19 14:59:28,799 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 14:59:52,588 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 15:00:03,283 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 15:01:01,923 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 15:01:03,175 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 915, in full_dispatch_request
+    rv = self.preprocess_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1291, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/main/routes.py", line 20, in before_request
+    g.locale = str(get_locale())
+                   ^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask_babel/__init__.py", line 263, in get_locale
+    rv = babel.locale_selector()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/__init__.py", line 15, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+                                               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'LANGUAGES'
+2025-11-19 15:01:58,435 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 15:02:17,224 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 15:02:18,411 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 915, in full_dispatch_request
+    rv = self.preprocess_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1291, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/main/routes.py", line 20, in before_request
+    g.locale = str(get_locale())
+                   ^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/venv/lib/python3.12/site-packages/flask_babel/__init__.py", line 263, in get_locale
+    rv = babel.locale_selector()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/__init__.py", line 15, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+                                               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'LANGUAGES'
+2025-11-19 15:08:45,894 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 16:09:08,995 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 16:09:23,767 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 16:09:48,158 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
+2025-11-19 16:17:08,549 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:79]
