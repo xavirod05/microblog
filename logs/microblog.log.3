@@ -1,56 +1,76 @@
-2025-10-08 16:11:49,408 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:53]
-2025-10-08 16:15:13,686 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:53]
-2025-10-08 17:05:23,958 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:53]
-2025-10-08 17:06:13,957 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:53]
-2025-11-03 15:42:04,486 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:43:00,546 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:43:39,457 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:43:57,961 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:47:56,686 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:48:25,033 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:51:15,390 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:53:37,588 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:52]
-2025-11-03 15:54:54,985 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:56]
-2025-11-03 15:56:10,581 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:56]
-2025-11-03 16:43:24,520 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:55]
-2025-11-03 16:44:39,300 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:55]
-2025-11-05 16:08:39,392 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:55]
-2025-11-05 16:10:14,805 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:10:14,857 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:10:14,857 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:12:20,229 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:13:48,544 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:15:33,732 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:16:21,695 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:18:00,685 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:20:59,271 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:30:28,221 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:30:35,647 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:31:32,319 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:33:54,250 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:34:12,836 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:34:24,466 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:62]
-2025-11-05 16:34:26,686 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
+2025-11-05 16:36:12,727 ERROR: Exception on /index [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
 Traceback (most recent call last):
   File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
   File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 915, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1291, in preprocess_request
-    rv = self.ensure_sync(before_func)()
-  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 19, in before_request
-    g.locale = str(get_locale())
-                   ~~~~~~~~~~^^
-  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask_babel/__init__.py", line 263, in get_locale
-    rv = babel.locale_selector()
-  File "/Users/xavierrodriguez/projects/microblog/app/__init__.py", line 15, in get_locale
-    return request.accept_languages.best_match(app.config["LANGUAGES"])
-                                               ~~~~~~~~~~^^^^^^^^^^^^^
-KeyError: 'LANGUAGES'
-2025-11-05 16:35:55,119 INFO: Microblog startup [in /Users/xavierrodriguez/projects/microblog/app/__init__.py:63]
-2025-11-05 16:35:58,377 ERROR: Exception on / [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 40, in index
+    return render_template('index.html', title=_('Home'), form=form,
+                           posts=posts.items, next_url=next_url,
+                           prev_url=prev_url)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/xavierrodriguez/projects/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+2025-11-05 16:36:16,280 ERROR: Exception on /index [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/app/routes.py", line 40, in index
+    return render_template('index.html', title=_('Home'), form=form,
+                           posts=posts.items, next_url=next_url,
+                           prev_url=prev_url)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/xavierrodriguez/projects/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+2025-11-05 16:36:18,876 ERROR: Exception on /index [GET] [in /Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py:875]
 Traceback (most recent call last):
   File "/Users/xavierrodriguez/projects/microblog/.venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
